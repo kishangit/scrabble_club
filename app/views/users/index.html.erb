@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Users</h2>
+  <table class="table table-dark table-hover table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |u| %>
+        <tr>
+          <td><%= u.first_name %></td>
+          <td><%= u.last_name %></td>
+          <td><%= u.email %></td>
+          <td>
+            <span>
+              <%= link_to 'Show', u, class: 'btn btn-info' %>
+            </span>
+            <% if current_user.is_administrator || current_user.id == u.id %>
+              |
+              <span>
+                <%= link_to('Edit', edit_path(u), class: 'btn btn-warning' ) %>
+              </span>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,43 @@
+<div class="container">
+  <h2><%= @user.first_name + " " + @user.last_name %></h2>
+  <table class="table table-dark table-hover">
+    <tbody>
+      <tr>
+        <td>First Name</td>
+        <td><%= @user.first_name %></td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td><%= @user.last_name %></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><%= @user.email %></td>
+      </tr>
+      <tr>
+        <td>Total matches</td>
+        <td><%= @match_details[:total_matches] %></td>
+      </tr>
+      <tr>
+        <td>Number of matches win</td>
+        <td><%= @match_details[:win_matches] %></td>
+      </tr>
+      <tr>
+        <td>Number of matches loose</td>
+        <td><%= @match_details[:lost_matches] %></td>
+      </tr>
+      <tr>
+      <td>Average score of all matches</td>
+        <td><%= @match_details[:average_score] %></td>
+      </tr>
+      <tr>
+        <td>Highest score</td>
+        <td><%= @match_details[:highest_score] %></td>
+      </tr>
+      <tr>
+        <td>Highest score against</td>
+        <td><%= "Highest score against #{@match_details[:against_whom]} on #{ @match_details[:match_time].strftime("%m-%d-%Y")} at #{@match_details[:location]}" %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

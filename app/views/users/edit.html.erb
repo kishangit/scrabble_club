@@ -1,0 +1,26 @@
+<%= form_for(@user, :url => { :action => "update" } ) do |f| %>
+  <%= f.hidden_field :id %>
+  <div class="field">
+    <%= f.label :email, "First Name" %><br />
+    <%= f.text_field :first_name, :autocomplete => "off"  %>
+  </div>
+  <br />
+  <div class="field">
+    <%= f.label :email, "Last Name" %><br />
+    <%= f.text_field :last_name, :autocomplete => "off"  %>
+  </div>
+  <br />
+  <div class="field">
+    <%= f.label :email, "Phone Number" %><br />
+    <%= f.text_field :phone, :autocomplete => "off"  %>
+  </div>
+  <br />
+  <div class="field">
+    <%= f.label :password, "Password" %><br />
+    <%= f.password_field :password, :autocomplete => "off"  %>
+  </div>
+  <br />
+  <div class="action_container">
+    <%= f.submit %>
+  </div>
+<% end %>
