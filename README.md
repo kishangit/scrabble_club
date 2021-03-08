@@ -23,7 +23,7 @@ Devise, Faker
 # Steps
 Step 0: Clone the repo: <br />
 Step 1: bundle install <br />
-Step 2: npm install
+Step 2: npm install <br />
 Step 3: rails db:setup <br />
 Step 4: rails s <br />
 
